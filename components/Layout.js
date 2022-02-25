@@ -4,7 +4,6 @@ import {Logo}  from '../components/Logo'
 import ProgressBar from  '../components/ProgressBar'
 import Link from 'next/link';
 // import { useUser, UserButton } from '@clerk/nextjs';
-import githubLogo from '../assets/githubLogo.svg'
 
 const Layout = ({children, name, button, description, loading = false}) => {
     return (
@@ -19,7 +18,7 @@ const Layout = ({children, name, button, description, loading = false}) => {
                     <div className="flex gap-5 items-center">
                         <Link href="https://github.com/ErickRuano/thirdauth-frontend">
                             <a className='text-white text-base cursor-pointer hover:text-primary-600 font-bold'>
-                                <img src={githubLogo.src} alt="" className='noMargin h-8'/>
+                                <img src={`/images/landing-image-rounded.png`} alt="Github Logo" className='noMargin h-8'/>
                             </a>
                         </Link>
                         {/* <UserButton /> */}
