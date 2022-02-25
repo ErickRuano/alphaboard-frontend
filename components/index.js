@@ -6,6 +6,7 @@ import Placeholder from "./Placeholder";
 import ProgressBar from "./ProgressBar";
 import Select from "./Select";
 import Tabs from "./Tabs";
+import Avatar from "./Avatar";  
 
 export {
     Button,
@@ -15,5 +16,6 @@ export {
     Placeholder,
     ProgressBar,
     Select,
-    Tabs
+    Tabs,
+    Avatar
 };
