@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import {Button, Avatar} from '@components'
 
 export default function Home() {
   return (
@@ -12,16 +13,22 @@ export default function Home() {
       <header className='w-full flex p-10 items-center justify-between'>
         <div className='logo text-4xl font-extrabold hover:cursor-pointer'><span className='text-primary'>Alpha</span>Board</div>
         <div>
-        <button className="btn btn-primary btn-outline">Sign in with MetaMask</button>
+        {/* <button className="btn btn-primary btn-outline">Sign in with MetaMask</button> */}
+        <Button className="btn-primary btn-outline" >
+          Sign in with MetaMask
+        </Button>
         </div>
       </header>
 
-      <main className={`w-full h-full flex flex-col lg:flex-row p-10 lg:px-0 gap-10 max-w-screen-2xl m-auto`}>
-        <div className={`w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left`}>
+      <main className={`w-full h-full flex flex-col lg:flex-row p-10 gap-10 max-w-screen-2xl m-auto`}>
+        <div className={`w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left grow-0`}>
           <h1 className={`text-4xl mb-5`}>Get a NFT-gated private platform for your alpha groups</h1>
           <p className={`text-xl text-gray-600 text-info-content`}>Create a group, send unique NFTs to your partners, and start sharing NFT projects and insights.</p>
         </div>
-        <div className={`w-full h-full lg:w-1/2 flex flex-row justify-center items-start bg-center lg:bg-right-top bg-no-repeat bg-contain	`} style={{backgroundImage: `url(/images/landing-image-rounded.png)`}}>
+        <div className={`w-full h-full lg:w-1/2 flex flex-row items-center justify-center 2xl:justify-between overflow-hidden gap-10 flex-wrap relative grow-0`} >
+          {[0,1,2,3].map((item, index) => <div className="w-50 h-50 p-5 bg-base-content rounded-2xl">
+            <Avatar {...{width:275, height:275}} />
+          </div>) }
           <img src='/images/landing-image-rounded.png' className={`hidden`} alt="Image of NFTs collection" />
         </div>
       </main>
