@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import {Button} from '@components'
 
 export default function Home() {
   return (
@@ -12,7 +13,10 @@ export default function Home() {
       <header className='w-full flex p-10 items-center justify-between'>
         <div className='logo text-4xl font-extrabold hover:cursor-pointer'><span className='text-primary'>Alpha</span>Board</div>
         <div>
-        <button className="btn btn-primary btn-outline">Sign in with MetaMask</button>
+        {/* <button className="btn btn-primary btn-outline">Sign in with MetaMask</button> */}
+        <Button className="btn-primary btn-outline" >
+          Sign in with MetaMask
+        </Button>
         </div>
       </header>
 
