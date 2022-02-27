@@ -16,7 +16,7 @@ const Session = ({children}) => {
 
   useEffect(() => {
     //read token from localStorage
-      if (localStorage.getItem("token")) {
+      if (true) {
         setLogged(true);
       } else {
         // router.push({

@@ -7,7 +7,7 @@ export default dynamic(
 )
 
 const Canvas = (props) => {
-    console.log(props)
+    // console.log(props)
     const [id, setId] = useState(generateId(20));
     const [width, setWidth] = useState(`${ props?.width || 300 }px`);
     const [height, setHeight] = useState(`${ props?.height || 300 }px`);
@@ -22,7 +22,7 @@ const Canvas = (props) => {
         let canvas = document.getElementById(id)
         
         // Canvas supported
-        console.log(canvas);
+        // console.log(canvas);
         if (canvas?.getContext) {
             ctx = canvas.getContext('2d');
 
