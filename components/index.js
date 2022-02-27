@@ -7,6 +7,7 @@ import ProgressBar from "./ProgressBar";
 import Select from "./Select";
 import Tabs from "./Tabs";
 import Avatar from "./Avatar";  
+import GroupLayout from "./GroupLayout";
 
 export {
     Button,
@@ -17,5 +18,6 @@ export {
     ProgressBar,
     Select,
     Tabs,
-    Avatar
+    Avatar,
+    GroupLayout
 };

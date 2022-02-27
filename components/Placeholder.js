@@ -1,5 +1,5 @@
 
-const Placeholder = ({icon='error_outline', messagge='Hola', title='Hola'}) => {
+const Placeholder = ({icon='error_outline', message='Hola', title='Hola'}) => {
     return (
       <div className="px-10 flex flex-start items-center text-gray-600">
         <span className="material-icons text-6xl">
@@ -10,12 +10,12 @@ const Placeholder = ({icon='error_outline', messagge='Hola', title='Hola'}) => {
                 {title}
             </h1>
             <p className="noMargin text-sm">
-                {messagge}
+                {message}
             </p>
         </div>
       </div>
     );
   };
   
-  export{ Placeholder }; 
+  export default Placeholder;; 
   
