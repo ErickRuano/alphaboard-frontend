@@ -5,7 +5,7 @@ import ProgressBar from  '../components/ProgressBar'
 import Link from 'next/link';
 // import { useUser, UserButton } from '@clerk/nextjs';
 
-const Layout = ({children, name, button, description, loading = false}) => {
+const Layout = ({children, name, button, description, variant = 'default', loading = false}) => {
     return (
         <div className="h-screen overflow-hidden flex flex-col">
             <Head>
@@ -30,19 +30,32 @@ const Layout = ({children, name, button, description, loading = false}) => {
                 </div>
             }
             {
-                !loading && <div className='overflow-y-scroll w-full mx-auto py-20 px-20 2xl:px-0' >
-                <div className="max-w-screen-2xl m-auto">
-                    <div className="flex flex-col justify-center items-center">
-                        <div className='flex flex-col text-center'>
-                            <h1 className='mb-2'>{name}</h1>
-                            <span className=''>{description}</span>
+                !loading && <>
+                    {variant == 'default' && <div className='overflow-y-scroll h-full w-full mx-auto py-20 px-20 2xl:px-0' >
+                        <div className="h-full max-w-screen-2xl flex flex-col m-auto">
+                            {/* <div className="flex flex-col justify-center items-center mb-20">
+                                <div className='flex flex-col text-center'>
+                                    {name && <h1 className='mb-2'>{name}</h1>}
+                                    {description && <span className=''>{description}</span>}
+                                </div>
+                                {button}
+                            </div> */}
+                            {
+                                (name || description) && <div className="flex flex-col justify-center items-center mb-20">
+                                    <div className='flex flex-col text-center'>
+                                        {name && <h1 className='mb-2'>{name}</h1>}
+                                        {description && <span className=''>{description}</span>}
+                                    </div>
+                                    {button}
+                                </div>
+                            }
+                            {children}
                         </div>
-                        {button}
-                    </div>
-                    <div className="mb-10"></div>
-                    {children}
-                </div>
-            </div>
+                    </div>}
+                    {variant == 'full' && <div className='overflow-y-scroll h-full w-full mx-auto py-10 px-20 2xl:px-0' >
+                        {children}
+                    </div>}
+                </>
             }
         </div>
       );
