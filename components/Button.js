@@ -1,7 +1,7 @@
-const Button = ({name, handler, children, loading, ...rest}) => {
+const Button = ({name, onClick, children, loading, ...rest}) => {
 
   return (
-    <button onClick={handler} className={`btn rounded-full px-4 py-2 ${loading ? 'loading' : ''} ${rest.className}`}>
+    <button onClick={onClick} className={`btn rounded-full px-4 py-2 ${loading ? 'loading' : ''} ${rest.className}`}>
       {children}
     </button>
   );
